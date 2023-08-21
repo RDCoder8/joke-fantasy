@@ -5,7 +5,7 @@ import axios from 'axios'
 function App() {
 const [quote, setQuote] = useState("")
 const [character, setCharacter] = useState(null)
-const [input, setInput] = useState("")
+const [input, setInput] = useState("tifa")
 
 function setName(evt) {
   setInput(evt.target.value)
@@ -68,7 +68,7 @@ useEffect(() => {
      {quote ? quote : "Want to hear a joke?" }
      <form>
       <input type="text" />
-      <button type='submit' onClick={fetchCharacter}>Select Character</button>
+      <button type='submit' onClick={() => fetchCharacter(input)}>Select Character</button>
      </form>
     </>
   )
