@@ -7,7 +7,7 @@ const [quote, setQuote] = useState("")
 const [character, setCharacter] = useState(null)
 const [input, setInput] = useState("tifa")
 
-function setName(evt) {
+function handleChange(evt) {
   setInput(evt.target.value)
 }
 
@@ -55,6 +55,10 @@ async function fetchCharacter(name) {
  
 }
 
+const handleSubmit = (evt) => {
+  evt.preventDefault();
+};
+
 useEffect(() => {
   fetchCharacter("cloud")
 }, [])
@@ -66,8 +70,8 @@ useEffect(() => {
      <img src={character ? character.pictures[0].url : ""} />
      <button onClick={fetchDadJoke}>Get Joke</button>
      {quote ? quote : "Want to hear a joke?" }
-     <form>
-      <input type="text" />
+     <form onSubmit={handleSubmit}>
+      <input type="text" onChange={handleChange} />
       <button type='submit' onClick={() => fetchCharacter(input)}>Select Character</button>
      </form>
     </>
