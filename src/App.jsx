@@ -4,6 +4,7 @@ import Character from "./components/Character";
 import { fetchCharacter } from "./services/fetchCharacter";
 import Enemy from "./components/Enemy";
 import Joke from "./components/Joke";
+import LearnMore from "./components/LearnMore";
 
 function App() {
   const [character, setCharacter] = useState(null);
@@ -62,6 +63,7 @@ function App() {
         <input type="text" onChange={handleChange} />
       </form>
       <Joke />
+      <LearnMore />
     </div>
   );
 }
