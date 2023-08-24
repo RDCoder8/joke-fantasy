@@ -45,6 +45,7 @@ form > button {
   display: flex;
   flex-direction: column;
   box-shadow: 10px 10px 5px 0px rgba(34,18,255,0.57);
+  margin-bottom: 2%;
 }
 
 .character-container {
@@ -104,8 +105,4 @@ form > button {
 
 a > p {
   text-align: center;
-}
-
-.carousel {
-  margin-top: 2%;
 }

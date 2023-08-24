@@ -7,8 +7,8 @@ function ImageCarousel() {
       <Carousel.Item>
         <img src='/FFVII-CloudChocobo.png' className='w-100'/>
         <Carousel.Caption>
-          <h3>Tell Dad Jokes, Get a New Ride</h3>
-          <p>"I love the shiny feathers and smooth hand."</p>
+          <h3 style={{color: 'black'}}>Tell Dad Jokes, Get a New Ride</h3>
+          <p style={{color: 'black'}}>"I love the shiny feathers and smooth hand."</p>
         </Carousel.Caption>
       </Carousel.Item>
       <Carousel.Item>
