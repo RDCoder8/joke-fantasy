@@ -18,8 +18,8 @@ function LearnMore() {
         }
     ]
 
-    const displaySections = sections.map(section => {
-        return <SectionItem {...section}/>
+    const displaySections = sections.map((section, index) => {
+        return <SectionItem key={index} {...section}/>
     })
   return (
     <section className="section-container">

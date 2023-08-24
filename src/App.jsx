@@ -6,16 +6,19 @@ import Enemy from "./components/Enemy";
 import Joke from "./components/Joke";
 import LearnMore from "./components/LearnMore";
 import Header from "./components/Header";
+import SubHeader from "./components/SubHeader";
 
 function App() {
   const [character, setCharacter] = useState(null);
   const [enemy, setEnemy] = useState(null);
   const [input, setInput] = useState("");
+  const [laughCount, setLaughCount] = useState(localStorage.laughScore ? Number(localStorage.laughScore) : 0)
+
+  localStorage.setItem("laughScore", JSON.stringify(laughCount))
 
   function handleChange(evt) {
     setInput(evt.target.value);
   }
-
 
   // CORS error disables this from working. Return later.
   // function fetchInsult() {
@@ -41,6 +44,11 @@ function App() {
     evt.preventDefault();
   };
 
+  function increaseLaughter (evt) {
+    setLaughCount(laughCount + 1)
+  }
+
+
   useEffect(() => {
     fetchCharacter(setCharacter, "cloud");
     fetch("https://www.moogleapi.com/api/v1/monsters/search?name=chocobo")
@@ -51,7 +59,7 @@ function App() {
   return (
     <div>
       <Header />
-      <audio src="/chocobo.mp3" controls autoPlay/>
+      <SubHeader laughCount={laughCount}/>
       <main>
         <Character character={character} />
         <Enemy character={enemy} />
@@ -65,9 +73,8 @@ function App() {
         </button>
         <input type="text" onChange={handleChange} />
       </form>
-      <Joke />
+      <Joke increaseLaughter={increaseLaughter} />
       <LearnMore />
-      
     </div>
   );
 }

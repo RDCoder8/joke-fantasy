@@ -29,6 +29,8 @@ main {
 
 input {
   width: 80%;
+  font-size: larger;
+  text-align: center;
 }
 
 form > button {
@@ -67,8 +69,14 @@ form > button {
   margin-bottom: 20px;
 }
 
+.sub-header {
+  display: flex;
+  justify-content: space-between;
+}
+
 .message {
   font-size: 1.7rem;
+  text-align: center;
 }
 
 .joke-box > button {

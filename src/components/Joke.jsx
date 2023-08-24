@@ -1,8 +1,10 @@
 import { useEffect, useState } from "react"
 
-function Joke() {
+function Joke({increaseLaughter}) {
     const [quote, setQuote] = useState("Want to hear a joke?");
     const [messageArray, setMessageArray] = useState([])
+    const [toggle, setToggle] = useState(false)
+    let laughter
 
     function fetchDadJoke() {
         fetch("https://icanhazdadjoke.com/", {
@@ -14,12 +16,27 @@ function Joke() {
           .then((json) => setQuote(json.joke));
       }
 
+      function didTheChocoboLaugh() {
+        if (Math.random() > .5) {
+          laughter = "The Chocobo chuckled"
+          setToggle(true)
+        } else {
+          laughter = "The Chocobo goaned"
+          setToggle(false)
+        }
+        return laughter
+      }
+
       function handleButtonClick() {
         if (messageArray.length === 0) {
         fetchDadJoke()
-        messageArray.push("The Chocobo chuckled", "Do you want to tell another joke?")
+        didTheChocoboLaugh()
+        messageArray.push(laughter, "Do you want to tell another joke?")
         } else {
           setQuote(messageArray.shift())
+          if (messageArray.length === 1 && toggle) {
+            increaseLaughter()
+          }
         }
       }
 

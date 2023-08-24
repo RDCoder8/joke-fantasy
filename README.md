@@ -50,8 +50,8 @@ Adding classes for desired animations has proven difficult. It will be added to 
 
 Future Plans
 
-Add music
+Add music (Completed)
 Randomize if the Chocobo laughs
-Add allow user to keep a record of the number times the chocobo has laughed
-Add animations for the background and the images used
+Add allow user to keep a record of the number times the chocobo has laughed (Completed)
+Add animations for the background and the images used 
 Bonus image carousel
