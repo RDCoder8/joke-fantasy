@@ -72,6 +72,7 @@ form > button {
 .sub-header {
   display: flex;
   justify-content: space-between;
+  margin-bottom: 2%;
 }
 
 .message {
@@ -103,4 +104,8 @@ form > button {
 
 a > p {
   text-align: center;
+}
+
+.carousel {
+  margin-top: 2%;
 }

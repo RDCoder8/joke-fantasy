@@ -7,6 +7,8 @@ import Joke from "./components/Joke";
 import LearnMore from "./components/LearnMore";
 import Header from "./components/Header";
 import SubHeader from "./components/SubHeader";
+import ImageCarousel from "./components/ImageCarousel";
+
 
 function App() {
   const [character, setCharacter] = useState(null);
@@ -74,6 +76,7 @@ function App() {
         <input type="text" onChange={handleChange} />
       </form>
       <Joke increaseLaughter={increaseLaughter} />
+      <ImageCarousel />
       <LearnMore />
     </div>
   );
