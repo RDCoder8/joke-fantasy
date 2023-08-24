@@ -12,7 +12,7 @@ main {
   width: 100%;
   display: flex;
   justify-content: space-between;
-  background-image: url(/public/Calm_Lands.png);
+  background-image: url(/Calm_Lands.png);
   background-size: cover;
   background-position: center;
   box-shadow: inset 10px 10px 5px 0px rgba(34,18,255,0.57);
@@ -73,4 +73,26 @@ form > button {
 
 .joke-box > button {
   align-self: center;
+}
+
+.section-container {
+  display: flex;
+  margin-top: 3%;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.section-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+ a > img {
+  width: 462px;
+  height: 245px;
+ }
+
+a > p {
+  text-align: center;
 }

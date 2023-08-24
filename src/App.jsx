@@ -51,6 +51,7 @@ function App() {
   return (
     <div>
       <Header />
+      <audio src="/chocobo.mp3" controls autoPlay/>
       <main>
         <Character character={character} />
         <Enemy character={enemy} />
@@ -66,6 +67,7 @@ function App() {
       </form>
       <Joke />
       <LearnMore />
+      
     </div>
   );
 }
