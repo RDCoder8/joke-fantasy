@@ -36,7 +36,9 @@ Beneath the character selector input is a display message box containing a messa
 
 Dependencies
 
+    "bootstrap": "^5.3.1",
     "react": "^18.2.0",
+    "react-bootstrap": "^2.8.0",
     "react-dom": "^18.2.0"
 
 ================================================================================================================================
@@ -51,7 +53,7 @@ Adding classes for desired animations has proven difficult. It will be added to 
 Future Plans
 
 Add music (Completed)
-Randomize if the Chocobo laughs
+Randomize if the Chocobo laughs (Completed)
 Add allow user to keep a record of the number times the chocobo has laughed (Completed)
 Add animations for the background and the images used 
-Bonus image carousel
+Bonus image carousel (Completed)
