@@ -25,7 +25,7 @@ function Joke() {
 
   return (
     <div className="joke-box">
-    <p>{quote}</p>
+    <p className="message">{quote}</p>
     <button onClick={handleButtonClick}>{messageArray.length === 0 ? "Get Joke" : "Continue"}</button>
     </div>
   )

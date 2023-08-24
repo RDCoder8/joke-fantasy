@@ -5,6 +5,7 @@ import { fetchCharacter } from "./services/fetchCharacter";
 import Enemy from "./components/Enemy";
 import Joke from "./components/Joke";
 import LearnMore from "./components/LearnMore";
+import Header from "./components/Header";
 
 function App() {
   const [character, setCharacter] = useState(null);
@@ -49,6 +50,7 @@ function App() {
 
   return (
     <div>
+      <Header />
       <main>
         <Character character={character} />
         <Enemy character={enemy} />

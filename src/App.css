@@ -4,17 +4,27 @@
   padding: 2rem;
 }
 
+body {
+  background: linear-gradient(180deg, #4759e1 0%, #d2adbc 100%)
+}
+
 main {
   width: 100%;
   display: flex;
   justify-content: space-between;
-  border: 2px solid red;
+  background-image: url(/public/Calm_Lands.png);
+  background-size: cover;
+  background-position: center;
+  box-shadow: inset 10px 10px 5px 0px rgba(34,18,255,0.57);
+  border-radius: 5px;
 }
 
 .form {
   border: 2px solid blue;
   display: flex;
   justify-content: space-between;
+  margin-top: 10px;
+  margin-bottom: 10px;
 }
 
 input {
@@ -29,4 +39,38 @@ form > button {
   width: 100%;
   border: 2px solid green;
   height: 25vh;
+  border-radius: 5px;
+  display: flex;
+  flex-direction: column;
+  box-shadow: 10px 10px 5px 0px rgba(34,18,255,0.57);
+}
+
+.character-container {
+  display: flex;
+  flex-direction: column;
+  max-width: 30%;
+  align-items: center;
+  overflow: hidden;
+  margin: 0 10px 1% 10px;
+}
+
+.character-container > img {
+  width: 300px;
+  height: 100%;
+  border-radius: 3px;
+}
+
+.header {
+  display: flex;
+  justify-content: center;
+  background-color: lightblue;
+  margin-bottom: 20px;
+}
+
+.message {
+  font-size: 1.7rem;
+}
+
+.joke-box > button {
+  align-self: center;
 }

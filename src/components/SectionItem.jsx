@@ -2,7 +2,7 @@
 
 function SectionItem(props) {
   return (
-    <div>
+    <div className="section-item">
         <h2>{props.name}</h2>
         <a href={props.link}>
             <img src={props.img} alt={props.alt} />

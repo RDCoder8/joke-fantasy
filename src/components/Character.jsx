@@ -1,8 +1,8 @@
-function Character({character}) {
+function Character({ character }) {
   return (
-    <div>
+    <div className="character-container">
       <h2>{character ? character.name : "Loading character"}</h2>
-      <img src={character ? character.pictures[0].url : ""} />
+        <img src={character ? character.pictures[0].url : ""} />
     </div>
   );
 }
